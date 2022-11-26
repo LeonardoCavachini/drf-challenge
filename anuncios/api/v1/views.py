@@ -7,6 +7,7 @@ class AdsAPIView(generics.ListCreateAPIView):
     queryset = Ad.objects.all()
     serializer_class = AdsSerializer
 
+
 class AdAPIView(generics.RetrieveUpdateAPIView):
     queryset = Ad.objects.all()
     serializer_class = AdsSerializer
