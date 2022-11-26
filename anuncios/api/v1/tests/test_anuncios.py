@@ -61,7 +61,7 @@ class AnunciosTests(APITestCase):
         )
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
 
-    def test_get_anuncio(self):
+    def test_get_by_pk_anuncio(self):
         self.get_authorization_headers()
         self.client.post(
             self.anuncios_urls,
@@ -71,6 +71,18 @@ class AnunciosTests(APITestCase):
         response = self.client.get(self.anuncio_url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['platform_name'], "plataform test")
+
+    def test_patch_anuncio(self):
+        self.get_authorization_headers()
+        self.client.post(
+            self.anuncios_urls,
+            self.data,
+            format='json'
+        )
+        data = {"platform_name": "new plataform"}
+        response = self.client.patch(self.anuncio_url, data=data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['platform_name'], "new plataform")
 
     def test_delete_anuncio(self):
         self.get_authorization_headers()
