@@ -4,6 +4,7 @@
 
 #### Django Apps
 
+- contas (usuários)
 - imovéis
 - anúncios
 - reservas
@@ -16,39 +17,38 @@
 
 - [Python 3.9](https://www.python.org)
 - [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/)
 
 ## Instructions to Run
 
 #### Setup Codebase
 
 - Clone this repo: `git clone https://github.com/LeonardoCavachini/drf-challenge.git`
-- Create virtual environment: `python3 -m venv venv`
-- Activate virtual environment: `source venv/bin/activate`
-- Install python requirements: `pip install -r requirements.txt`
 
-#### Run the Application
-
-- Run migrations: `python manage.py migrate`
-
-- Create userUser: `python manage.py createsuperuser`
-
-- Run the server: `python manage.py runserver 8000`
+This project needs docker to upload the database and application, in your terminal type `docker compose up `.
+Ready now you can play with the application.
+if you don't have the **Docker** installed, access [Docker](https://www.docker.com/) for more details.
 
 #### Token
 
-- On `http://localhost:8000/admin` with user and password access the application admin and check a token session, create a token and copy him.
-
-#### Populate the Database
-
-- Run Seeders: `python manage.py property_seed`
-- Run Seeders: `python manage.py ads_seed`
-- Run Seeders: `python manage.py reservation_seed`
+- On `http://localhost:8000/api/v1/register/` with email and password1 and password2 on the body, you can register in the application and receive a key as a token.
 
 #### Run Tests
 
 - Run django tests: `python manage.py test`
 
 ## Endpoints imoveis
+
+- Create Users (POST)
+
+```
+http://localhost:8000/api/v1/register/
+
+body = { 
+  "email": "user@user.com",
+  "password1": "a1s2d3f5g",
+  "password2": "a1s2d3f5g",
+}
 
 - Show imoveis (GET)
 

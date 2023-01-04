@@ -7,3 +7,6 @@ Markdown==3.4.1
 pytz==2022.6
 sqlparse==0.4.3
 zipp==3.10.0
+psycopg2==2.9.5
+django-rest-auth[with_social]==0.9.2
+drf-nested-routers==0.91.0
