@@ -33,10 +33,6 @@ if you don't have the **Docker** installed, access [Docker](https://www.docker.c
 
 - On `http://localhost:8000/api/v1/register/` with email and password1 and password2 on the body, you can register in the application and receive a key as a token.
 
-#### Run Tests
-
-- Run django tests: `python manage.py test`
-
 ## Endpoints imoveis
 
 - Create Users (POST)
