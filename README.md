@@ -49,6 +49,7 @@ body = {
   "password1": "a1s2d3f5g",
   "password2": "a1s2d3f5g",
 }
+```
 
 - Show imoveis (GET)
 
@@ -78,7 +79,6 @@ body = {
 
 ```
 http://localhost:8000/api/v1/imoveis/:property_code/
-
 ```
 
 - Update imóveis (PATCH)
@@ -90,13 +90,11 @@ http://localhost:8000/api/v1/imoveis/:property_code/
 body = { "limit_guests": 50 };
 
 ```
+
 - Delete imóveis (DELETE)
 
 ```
-
 http://localhost:8000/api/v1/imoveis/:property_code/
-
-
 ```
 
 ## Endpoints anúncios
