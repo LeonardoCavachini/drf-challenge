@@ -33,6 +33,10 @@ if you don't have the **Docker** installed, access [Docker](https://www.docker.c
 
 - On `http://localhost:8000/api/v1/register/` with email and password1 and password2 on the body, you can register in the application and receive a key as a token.
 
+## Documentation
+
+- On `http://localhost:8000/doc/`
+
 ## Endpoints imoveis
 
 - Create Users (POST)
